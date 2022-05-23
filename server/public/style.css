@@ -101,6 +101,7 @@ body {
   }
 
  .oldPrice {
+   text-decoration: line-through;
   position: relative;
   left: 0%;
    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -128,7 +129,13 @@ body {
 
 .titleText {
   position: relative;
-  top: -65px;
+  top: -75px;
+  font-family:cursive;
+  letter-spacing:4px;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 30px;
+  color: hsl(311, 88%, 49%);
 }
 .titleImage {
   padding-top: 15px;
@@ -172,6 +179,7 @@ text-align:justify ;
   
   height: 60%;
   left: -40%;
+  top: -25%;
 }
 
 .btn {

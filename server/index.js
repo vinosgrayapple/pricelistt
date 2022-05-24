@@ -1,7 +1,12 @@
 const express = require("express");
 const config = require("config");
 const path = require("path");
+const { cardTitleVariant1 } = require("./classes/CardTitle/CardTitle");
+const {cardN01} = require("./classes/filledCards/cardN01");
+
+
 useRouter = require("./routes/user.routes");
+
 
 const app = express();
 // app.use(express.json({extended:true}))
@@ -23,3 +28,5 @@ async function start() {
 }
 
 start();
+
+// console.log(cardN01.cardTitle)

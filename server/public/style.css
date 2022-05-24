@@ -14,19 +14,19 @@ body {
   align-items: center;
 }
 
-.card {
+/* .card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
   width: 600px;
   height: 600px;
-  background-color: transparent; /* #cfd3de;*/
+  background-color: transparent;
   padding: 5px 10px 10px 5px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px grey;
+  box-shadow: 5px 5px 15px rgb(128, 128, 128);
   border-style: 5px;
-}
+} */
 
 .cardTitle {
  
@@ -78,7 +78,7 @@ body {
   font-style: italic;
   font-weight: 800;
   font-size: 45px;
-  color:black;
+  color:rgb(0, 0, 0);
 }
 
 .productDescriptionText {
@@ -101,6 +101,7 @@ body {
   }
 
  .oldPrice {
+   text-decoration: line-through;
   position: relative;
   left: 0%;
    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -123,12 +124,18 @@ body {
   font-style: italic;
   font-weight: 800;
   font-size: 30px;
-  color: #e8e80e;
+  color: rgb(232, 232, 14);
 }
 
 .titleText {
   position: relative;
-  top: -65px;
+  top: -75px;
+  font-family:cursive;
+  letter-spacing:4px;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(235, 15, 195);
 }
 .titleImage {
   padding-top: 15px;
@@ -163,7 +170,7 @@ body {
   font-style: italic;
   font-weight: 100;
   font-size: 15px;
-  color:black;
+  color:rgb(0, 0, 0);
 text-align:justify ;
 }
 
@@ -172,6 +179,7 @@ text-align:justify ;
   
   height: 60%;
   left: -40%;
+  top: -25%;
 }
 
 .btn {

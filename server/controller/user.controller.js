@@ -1,3 +1,4 @@
+const { cardN01 } = require("../classes/filledCards/cardN01")
 const { cards1 } = require("../data/cards")
 
  
@@ -17,7 +18,9 @@ class UserController{
     async getPage (req,res){
         try{
             console.log(req.params)
-           return res.json(cards1)
+            console.log(cardN01)
+            return res.json(cardN01)
+
         }catch(err){
             console.log(" test Error: ", err)
         }

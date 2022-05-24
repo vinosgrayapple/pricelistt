@@ -2,6 +2,7 @@ const express = require("express");
 const config = require("config");
 const path = require("path");
 const { cardTitleVariant1 } = require("./classes/CardTitle/CardTitle");
+const {cardN01} = require("./classes/filledCards/cardN01");
 
 
 useRouter = require("./routes/user.routes");
@@ -28,4 +29,4 @@ async function start() {
 
 start();
 
-console.log(cardTitleVariant1.titleImage.titleImageSrc)
+// console.log(cardN01.cardTitle)

@@ -18,7 +18,7 @@ class ProductDescription {
   }
 }
 
-const productDescriptionVariant1 = ProductDescription({
+const productDescriptionVariant1 = new ProductDescription({
   text: "",
   style: {
     position: "relative",

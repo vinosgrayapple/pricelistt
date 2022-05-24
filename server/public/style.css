@@ -14,19 +14,19 @@ body {
   align-items: center;
 }
 
-.card {
+/* .card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
   width: 600px;
   height: 600px;
-  background-color: transparent; /* #cfd3de;*/
+  background-color: transparent;
   padding: 5px 10px 10px 5px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px grey;
+  box-shadow: 5px 5px 15px rgb(128, 128, 128);
   border-style: 5px;
-}
+} */
 
 .cardTitle {
  
@@ -78,7 +78,7 @@ body {
   font-style: italic;
   font-weight: 800;
   font-size: 45px;
-  color:black;
+  color:rgb(0, 0, 0);
 }
 
 .productDescriptionText {
@@ -124,7 +124,7 @@ body {
   font-style: italic;
   font-weight: 800;
   font-size: 30px;
-  color: #e8e80e;
+  color: rgb(232, 232, 14);
 }
 
 .titleText {
@@ -135,7 +135,7 @@ body {
   font-style: italic;
   font-weight: 800;
   font-size: 30px;
-  color: hsl(311, 88%, 49%);
+  color: rgb(235, 15, 195);
 }
 .titleImage {
   padding-top: 15px;

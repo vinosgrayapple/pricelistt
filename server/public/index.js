@@ -3,10 +3,10 @@ const cardElem = document.querySelector(".card");
 const cardTitleElem = document.querySelector(".cardTitle");
 const titleImageElem = document.querySelector(".titleImage");
 const titleTextElem = document.querySelector(".titleText");
-// const cardCenterElem  = document.querySelector('.cardCenter')
+const cardCenterElem = document.querySelector(".cardCenter");
 const productImageElem = document.querySelector(".productImage");
 const labelElem = document.querySelector(".label");
-// const labelImageElem  = document.querySelector('.labelImage')
+const labelImageElem = document.querySelector(".labelImage");
 const labelTextElem = document.querySelector(".labelText");
 const descriptionFieldElem = document.querySelector(".descriptionField");
 const productNameTextElem = document.querySelector(".productNameText");
@@ -16,22 +16,55 @@ const productDescriptionTextElem = document.querySelector(
 const currentPriceElem = document.querySelector(".currentPrice");
 const oldPriceElem = document.querySelector(".oldPrice");
 const cardBottomElem = document.querySelector(".cardBottom");
-const bottomImageElem  = document.querySelector('.bottomImage')
+const bottomImageElem = document.querySelector(".bottomImage");
 const bottomTextElem = document.querySelector(".bottomText");
-
+const bottomLogoElem = document.querySelector(".bottomLogo");
 const btnElem = document.querySelector(".btn");
 
+const updateStile = (elem, loadedStyle) => {
+  
+  const keyArr = Object.keys(loadedStyle);
+  const camelCasedKeyArr = keyArr.map((el) => {
+    do {
+      const index = el.indexOf("-");
+      if (index > 0) {
+        const replasedFragment = el[index] + el[index + 1];
+        const newChar = el[index + 1].toUpperCase();
+        el = el.replace(replasedFragment, newChar);
+      }
+    } while (el.indexOf("-") > 0);
+    return el
+  });
+
+  camelCasedKeyArr.forEach((el,index)=>{
+    elem.style[el]=loadedStyle[keyArr[index]]
+  })
+  
+};
+
 const updateCard = async (data) => {
+  const url = "http://127.0.0.1:7000/";
+
+  titleImageElem.src = url + data.titleImage;
   titleTextElem.innerHTML = data.titleText;
+  productImageElem.src = url + data.productImage;
+  labelImageElem.src = url + data.labelImage;
+  labelTextElem.innerHTML = data.labelText;
+
   productNameTextElem.innerHTML = data.productNameText;
   productDescriptionTextElem.innerHTML = data.productDescriptionText;
-  currentPriceElem.innerHTML = data.currentPrice
-  oldPriceElem.innerHTML = data.oldPrice
-  labelTextElem.innerHTML = data.labelText
-  bottomTextElem.innerHTML = data.bottomText
-
-
+  currentPriceElem.innerHTML = data.currentPrice;
+  oldPriceElem.innerHTML = data.oldPrice;
+  bottomImageElem.src = url + data.bottomImage;
+  bottomTextElem.innerHTML = data.bottomText;
+  bottomLogoElem.src = url + data.bottomLogo;
+  updateStile(cardElem, data.card.style);
 };
+const startAnimation = () => {
+  movingIn();
+  setTimeout(movingOut, 5000);
+};
+
 const getDataFromServer = async (
   url,
   method = "GET",
@@ -45,7 +78,7 @@ const getDataFromServer = async (
     }); //.then(data=>console.log(data));
     await updateCard(data);
   } catch (err) {
-    console.log(err.message);
+    console.log(err);
   }
 };
 
@@ -187,7 +220,8 @@ const movingOut = () => {
     delay: 4000,
   });
 };
+// document.addEventListener("DOMContentLoaded", () => {
+//   startAnimation();
+// });
 
 getDataFromServer("http://127.0.0.1:7000/page/1");
-
-movingIn()

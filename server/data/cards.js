@@ -1,6 +1,22 @@
 
  const cards1={
     id:1,
+
+    card:{style:{
+        'overflow': 'hidden',
+        'display': 'flex',
+        'flex-direction': 'column',
+        'margin-top': '25px',
+        'width': '600px',
+        'height': '600px',
+        'background-color': 'transparent', 
+        'padding': '5px 10px 10px 5px',
+        'border-radius': '10px',
+        'box-shadow': '5px 5px 15px rgb(128, 128, 128)',
+        'border-style': '5px',
+        
+    }},
+
     titleText:"РАСПРОДАЖА",
 
     titleImage:"pictures/Title1.png",
@@ -25,11 +41,11 @@
 
     cardBottom:{},
 
-    bottomImage:{},
+    bottomImage:"pictures/Bottom1.png",
 
     bottomLogo:"pictures/Logo1.png",
 
-    bottomText:" Данная акция не является настоящей рекламой, а является всего лишь результатом выполнения тестового задания"
+    bottomText:" Данная акция не является настоящей рекламой, а представляет собой всего лишь результатом выполнения тестового задания"
 
 
 }

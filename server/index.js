@@ -1,7 +1,11 @@
 const express = require("express");
 const config = require("config");
 const path = require("path");
+const { cardTitleVariant1 } = require("./classes/CardTitle/CardTitle");
+
+
 useRouter = require("./routes/user.routes");
+
 
 const app = express();
 // app.use(express.json({extended:true}))
@@ -23,3 +27,5 @@ async function start() {
 }
 
 start();
+
+console.log(cardTitleVariant1.titleImage.titleImageSrc)
